@@ -34,12 +34,11 @@ class system_state(systemData):
         self.worker_object = []
         self.Queue = Queue()
         self.complited_claims = []
-    
+
     def worker_list(self):
         for i in range(8):
             self.worker_object.append(worker())
     
-    def queue_list(self,):
-
+    def queue_list(self):
         for i in range(self.workers):
             self.Queue.arr.append(claim())
