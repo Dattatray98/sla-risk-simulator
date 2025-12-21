@@ -2,7 +2,7 @@ class systemData:
     def __init__(self):
         self.workers = 8
         self.queue_size = 1000
-        self.SLA_time = 24
+        self.SLA_time = 24 * 60
         self.time = 0 
         self.list = []
     
@@ -38,7 +38,9 @@ class system_state(systemData):
     def worker_list(self):
         for i in range(8):
             self.worker_object.append(worker())
+        print("workers  = ",len(self.worker_object))
     
     def queue_list(self):
-        for i in range(self.workers):
+        for i in range(self.queue_size):
             self.Queue.arr.append(claim())
+        print("Queue list = ",len(self.Queue.arr))
