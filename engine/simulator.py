@@ -44,14 +44,28 @@ def complete_claims(state):
             worker.remaining_time = 0
 
 
-def SLA_check(state):
-    for claim_obj in state.complited_claims:
-        if claim_obj.complition_time is None:
-            continue
+# def SLA_check(state):
+#     for claim_obj in state.complited_claims:
+#         if claim_obj.complition_time is None:
+#             continue
 
-        total_time = claim_obj.complition_time - claim_obj.arrival_time
+#         total_time = claim_obj.complition_time - claim_obj.arrival_time
 
-        if total_time > state.SLA_time:
+#         if total_time > state.SLA_time:
+#             claim_obj.SLA_Breached = True
+
+
+def predict_SLA_breach(state, processing_time):
+    capacity_per_minute = len(state.worker_object) / processing_time
+
+    if capacity_per_minute == 0:
+        return
+
+    for idx, claim_obj in enumerate(state.Queue.arr):
+        estimated_wait = idx / capacity_per_minute
+        estimated_completion_time = state.current_time + estimated_wait
+
+        if (estimated_completion_time - claim_obj.arrival_time) > state.SLA_time:
             claim_obj.SLA_Breached = True
 
 
@@ -130,16 +144,19 @@ def run_single_simulation(
         assign_workers(state, processing_time)
         process_work(state)
         complete_claims(state)
-        SLA_check(state)
+        # SLA_check(state)
+        predict_SLA_breach(state, processing_time)
         advance_time(state)
 
     total_completed = len(state.complited_claims)
-    sla_breaches = sum(1 for c in state.complited_claims if c.SLA_Breached)
+    sla_breached = any(c.SLA_Breached for c in state.complited_claims) or any(
+        c.SLA_Breached for c in state.Queue.arr
+    )
     final_queue_size = len(state.Queue.arr)
-  
+
     return {
         "completed": total_completed,
-        "sla_breaches": sla_breaches,
+        "sla_breaches": sla_breached,
         "final_queue_size": final_queue_size,
     }
 
@@ -172,7 +189,9 @@ def run_forecast(
 
         if result["sla_breaches"] > 0:
             sla_breach_runs += 1
-        
+    
+    print(sla_breach_runs)
+
     sla_breach_probabiltiy = sla_breach_runs / total_runs
 
     print(
@@ -190,13 +209,13 @@ def run_forecast(
 ss = system_state()
 ss.worker_list()
 ss.queue_list()
-
+ss.SLA_time = 24 * 60
 
 run_forecast(
     base_state=ss,
     forecast_window=240,
     processing_time=5,
     num_simulations=50,
-    expected_arrivals=5,
+    expected_arrivals=450,
     arrival_variations=4,
 )

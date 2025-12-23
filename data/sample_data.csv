@@ -1,0 +1,101 @@
+case_id,activity_name,timestamp,claimant_name,agent_name,adjuster_name,claim_amount,claimant_age,type_of_policy,car_make,car_model,car_year,type_of_accident,user_type
+a626bc58-a7b2-4eff-aca9-2a622cd0c492,First Notification of Loss (FNOL),2020-09-24 14:08:42.423530,Karen Lopez,Thomas Cantu,Ian Garcia,1914.96,75,Collision,Honda,Civic,2012,Rollover,RPA
+a626bc58-a7b2-4eff-aca9-2a622cd0c492,Assign Claim,2020-10-13 03:51:28.627923,Karen Lopez,Thomas Cantu,Ian Garcia,1914.96,75,Collision,Honda,Civic,2012,Rollover,RPA
+a626bc58-a7b2-4eff-aca9-2a622cd0c492,Claim Decision,2020-10-14 22:30:14.948970,Karen Lopez,Thomas Cantu,Ian Garcia,1914.96,75,Collision,Honda,Civic,2012,Rollover,RPA
+a626bc58-a7b2-4eff-aca9-2a622cd0c492,Set Reserve,2020-10-24 11:49:39.053890,Karen Lopez,Thomas Cantu,Ian Garcia,1914.96,75,Collision,Honda,Civic,2012,Rollover,RPA
+a626bc58-a7b2-4eff-aca9-2a622cd0c492,Payment Sent,2020-10-27 05:46:04.378718,Karen Lopez,Thomas Cantu,Ian Garcia,1914.96,75,Collision,Honda,Civic,2012,Rollover,RPA
+a626bc58-a7b2-4eff-aca9-2a622cd0c492,Close Claim,2020-11-06 00:55:19.480774,Karen Lopez,Thomas Cantu,Ian Garcia,1914.96,75,Collision,Honda,Civic,2012,Rollover,RPA
+14286703-b629-477a-9043-0610b928aeec,First Notification of Loss (FNOL),2022-06-16 05:52:40.531612,Mark Walker,Ian Smith,Kara Vincent,1358.64,75,Comprehensive,Toyota,Camry,2010,Rollover,Human
+14286703-b629-477a-9043-0610b928aeec,Assign Claim,2022-07-01 23:42:33.486916,Mark Walker,Ian Smith,Kara Vincent,1358.64,75,Comprehensive,Toyota,Camry,2010,Rollover,Human
+14286703-b629-477a-9043-0610b928aeec,Claim Decision,2022-07-08 00:50:34.659426,Mark Walker,Ian Smith,Kara Vincent,1358.64,75,Comprehensive,Toyota,Camry,2010,Rollover,Human
+14286703-b629-477a-9043-0610b928aeec,Set Reserve,2022-07-15 05:50:33.396651,Mark Walker,Ian Smith,Kara Vincent,1358.64,75,Comprehensive,Toyota,Camry,2010,Rollover,Human
+14286703-b629-477a-9043-0610b928aeec,Payment Sent,2022-07-21 17:49:17.737541,Mark Walker,Ian Smith,Kara Vincent,1358.64,75,Comprehensive,Toyota,Camry,2010,Rollover,Human
+14286703-b629-477a-9043-0610b928aeec,Close Claim,2022-07-27 07:18:48.993619,Mark Walker,Ian Smith,Kara Vincent,1358.64,75,Comprehensive,Toyota,Camry,2010,Rollover,Human
+7213cc33-0b8a-42d6-804a-0fc6df5b1349,First Notification of Loss (FNOL),2022-03-16 10:26:10.302722,Pamela Sawyer,Brianna Lamb,Ashley Joseph,5955.97,51,Liability,Jeep,Wrangler,2013,Side-impact,RPA
+7213cc33-0b8a-42d6-804a-0fc6df5b1349,Assign Claim,2022-03-28 02:41:50.193484,Pamela Sawyer,Brianna Lamb,Ashley Joseph,5955.97,51,Liability,Jeep,Wrangler,2013,Side-impact,RPA
+7213cc33-0b8a-42d6-804a-0fc6df5b1349,Claim Decision,2022-04-04 12:25:12.133655,Pamela Sawyer,Brianna Lamb,Ashley Joseph,5955.97,51,Liability,Jeep,Wrangler,2013,Side-impact,RPA
+7213cc33-0b8a-42d6-804a-0fc6df5b1349,Set Reserve,2022-04-09 17:03:42.260412,Pamela Sawyer,Brianna Lamb,Ashley Joseph,5955.97,51,Liability,Jeep,Wrangler,2013,Side-impact,RPA
+7213cc33-0b8a-42d6-804a-0fc6df5b1349,Payment Sent,2022-04-15 08:00:09.369184,Pamela Sawyer,Brianna Lamb,Ashley Joseph,5955.97,51,Liability,Jeep,Wrangler,2013,Side-impact,RPA
+7213cc33-0b8a-42d6-804a-0fc6df5b1349,Close Claim,2022-04-19 16:33:43.419149,Pamela Sawyer,Brianna Lamb,Ashley Joseph,5955.97,51,Liability,Jeep,Wrangler,2013,Side-impact,RPA
+e3fb0c8a-a386-479d-aba9-e9f3def1a9fe,First Notification of Loss (FNOL),2020-12-18 16:19:42.229263,Rebecca Smith,Chad Thornton,Elizabeth Phillips,1533.96,75,Collision,Chevrolet,Silverado,2019,Side-impact,Human
+e3fb0c8a-a386-479d-aba9-e9f3def1a9fe,Assign Claim,2020-12-30 04:22:47.841475,Rebecca Smith,Chad Thornton,Elizabeth Phillips,1533.96,75,Collision,Chevrolet,Silverado,2019,Side-impact,Human
+e3fb0c8a-a386-479d-aba9-e9f3def1a9fe,Claim Decision,2021-01-03 16:03:53.768946,Rebecca Smith,Chad Thornton,Elizabeth Phillips,1533.96,75,Collision,Chevrolet,Silverado,2019,Side-impact,Human
+e3fb0c8a-a386-479d-aba9-e9f3def1a9fe,Set Reserve,2021-01-07 08:20:47.583120,Rebecca Smith,Chad Thornton,Elizabeth Phillips,1533.96,75,Collision,Chevrolet,Silverado,2019,Side-impact,Human
+e3fb0c8a-a386-479d-aba9-e9f3def1a9fe,Payment Sent,2021-01-13 21:15:38.310782,Rebecca Smith,Chad Thornton,Elizabeth Phillips,1533.96,75,Collision,Chevrolet,Silverado,2019,Side-impact,Human
+e3fb0c8a-a386-479d-aba9-e9f3def1a9fe,Close Claim,2021-01-16 12:55:26.722959,Rebecca Smith,Chad Thornton,Elizabeth Phillips,1533.96,75,Collision,Chevrolet,Silverado,2019,Side-impact,Human
+831b193f-c037-475f-8814-a9d2f76c4d92,First Notification of Loss (FNOL),2022-02-16 19:54:46.631955,Ashley Martin,Michael Gonzales,Adam Bauer,1800.85,39,Collision,Toyota,Camry,2018,Head-on,Human
+831b193f-c037-475f-8814-a9d2f76c4d92,Assign Claim,2022-03-06 05:18:00.356891,Ashley Martin,Michael Gonzales,Adam Bauer,1800.85,39,Collision,Toyota,Camry,2018,Head-on,Human
+831b193f-c037-475f-8814-a9d2f76c4d92,Claim Decision,2022-03-12 02:12:36.603517,Ashley Martin,Michael Gonzales,Adam Bauer,1800.85,39,Collision,Toyota,Camry,2018,Head-on,Human
+831b193f-c037-475f-8814-a9d2f76c4d92,Set Reserve,2022-03-16 19:39:21.649918,Ashley Martin,Michael Gonzales,Adam Bauer,1800.85,39,Collision,Toyota,Camry,2018,Head-on,Human
+831b193f-c037-475f-8814-a9d2f76c4d92,Payment Sent,2022-03-22 05:14:37.560556,Ashley Martin,Michael Gonzales,Adam Bauer,1800.85,39,Collision,Toyota,Camry,2018,Head-on,Human
+831b193f-c037-475f-8814-a9d2f76c4d92,Close Claim,2022-03-26 01:06:56.330588,Ashley Martin,Michael Gonzales,Adam Bauer,1800.85,39,Collision,Toyota,Camry,2018,Head-on,Human
+6896959f-3e4a-49df-bbe7-1423a7f6ea8c,First Notification of Loss (FNOL),2021-01-30 02:44:34.218302,Karen Gentry,Jennifer Lambert,Joseph White,3367.68,41,Comprehensive,Nissan,Altima,2020,Rollover,RPA
+6896959f-3e4a-49df-bbe7-1423a7f6ea8c,Assign Claim,2021-02-13 08:52:12.328751,Karen Gentry,Jennifer Lambert,Joseph White,3367.68,41,Comprehensive,Nissan,Altima,2020,Rollover,RPA
+6896959f-3e4a-49df-bbe7-1423a7f6ea8c,Claim Decision,2021-02-19 04:32:40.878681,Karen Gentry,Jennifer Lambert,Joseph White,3367.68,41,Comprehensive,Nissan,Altima,2020,Rollover,RPA
+6896959f-3e4a-49df-bbe7-1423a7f6ea8c,Set Reserve,2021-02-22 15:46:19.011131,Karen Gentry,Jennifer Lambert,Joseph White,3367.68,41,Comprehensive,Nissan,Altima,2020,Rollover,RPA
+6896959f-3e4a-49df-bbe7-1423a7f6ea8c,Payment Sent,2021-02-27 08:49:11.632681,Karen Gentry,Jennifer Lambert,Joseph White,3367.68,41,Comprehensive,Nissan,Altima,2020,Rollover,RPA
+6896959f-3e4a-49df-bbe7-1423a7f6ea8c,Close Claim,2021-03-03 01:19:09.105072,Karen Gentry,Jennifer Lambert,Joseph White,3367.68,41,Comprehensive,Nissan,Altima,2020,Rollover,RPA
+de8ebae3-8239-478e-a739-f2daf44f174a,First Notification of Loss (FNOL),2021-09-01 22:29:21.529978,Andrea Meyer,Melissa Lester,Christopher Dawson,4314.16,43,Collision,Toyota,Camry,2017,Rollover,Human
+de8ebae3-8239-478e-a739-f2daf44f174a,Assign Claim,2021-09-14 13:04:00.138522,Andrea Meyer,Melissa Lester,Christopher Dawson,4314.16,43,Collision,Toyota,Camry,2017,Rollover,Human
+de8ebae3-8239-478e-a739-f2daf44f174a,Claim Decision,2021-09-20 01:44:07.472030,Andrea Meyer,Melissa Lester,Christopher Dawson,4314.16,43,Collision,Toyota,Camry,2017,Rollover,Human
+de8ebae3-8239-478e-a739-f2daf44f174a,Set Reserve,2021-09-26 01:41:24.105589,Andrea Meyer,Melissa Lester,Christopher Dawson,4314.16,43,Collision,Toyota,Camry,2017,Rollover,Human
+de8ebae3-8239-478e-a739-f2daf44f174a,Payment Sent,2021-10-01 12:10:15.452926,Andrea Meyer,Melissa Lester,Christopher Dawson,4314.16,43,Collision,Toyota,Camry,2017,Rollover,Human
+de8ebae3-8239-478e-a739-f2daf44f174a,Close Claim,2021-10-07 08:15:01.244370,Andrea Meyer,Melissa Lester,Christopher Dawson,4314.16,43,Collision,Toyota,Camry,2017,Rollover,Human
+d1a3aa5d-929e-47a9-a260-a7b67f169b11,First Notification of Loss (FNOL),2020-05-04 19:35:21.581083,Ryan Jenkins,Jasmine Goodman,Isaac Skinner,6422.61,82,Comprehensive,Hyundai,Elantra,2012,Head-on,Human
+d1a3aa5d-929e-47a9-a260-a7b67f169b11,Assign Claim,2020-05-20 15:01:15.673510,Ryan Jenkins,Jasmine Goodman,Isaac Skinner,6422.61,82,Comprehensive,Hyundai,Elantra,2012,Head-on,Human
+d1a3aa5d-929e-47a9-a260-a7b67f169b11,Claim Decision,2020-05-21 23:25:46.448027,Ryan Jenkins,Jasmine Goodman,Isaac Skinner,6422.61,82,Comprehensive,Hyundai,Elantra,2012,Head-on,Human
+d1a3aa5d-929e-47a9-a260-a7b67f169b11,Set Reserve,2020-05-23 20:04:36.982044,Ryan Jenkins,Jasmine Goodman,Isaac Skinner,6422.61,82,Comprehensive,Hyundai,Elantra,2012,Head-on,Human
+d1a3aa5d-929e-47a9-a260-a7b67f169b11,Payment Sent,2020-05-25 04:29:34.720336,Ryan Jenkins,Jasmine Goodman,Isaac Skinner,6422.61,82,Comprehensive,Hyundai,Elantra,2012,Head-on,Human
+d1a3aa5d-929e-47a9-a260-a7b67f169b11,Close Claim,2020-05-31 14:38:32.524934,Ryan Jenkins,Jasmine Goodman,Isaac Skinner,6422.61,82,Comprehensive,Hyundai,Elantra,2012,Head-on,Human
+3dbd5d95-1163-4ed6-a4d3-82327ab019ce,First Notification of Loss (FNOL),2021-01-11 19:12:43.878126,Theresa Hess,Kevin Valencia,Stephanie Rice,4334.12,72,Comprehensive,Hyundai,Elantra,2022,Rear-end,Human
+3dbd5d95-1163-4ed6-a4d3-82327ab019ce,Assign Claim,2021-01-26 12:14:34.665693,Theresa Hess,Kevin Valencia,Stephanie Rice,4334.12,72,Comprehensive,Hyundai,Elantra,2022,Rear-end,Human
+3dbd5d95-1163-4ed6-a4d3-82327ab019ce,Claim Decision,2021-02-01 07:05:54.884105,Theresa Hess,Kevin Valencia,Stephanie Rice,4334.12,72,Comprehensive,Hyundai,Elantra,2022,Rear-end,Human
+3dbd5d95-1163-4ed6-a4d3-82327ab019ce,Set Reserve,2021-02-04 21:44:52.533784,Theresa Hess,Kevin Valencia,Stephanie Rice,4334.12,72,Comprehensive,Hyundai,Elantra,2022,Rear-end,Human
+3dbd5d95-1163-4ed6-a4d3-82327ab019ce,Payment Sent,2021-02-11 05:04:00.456734,Theresa Hess,Kevin Valencia,Stephanie Rice,4334.12,72,Comprehensive,Hyundai,Elantra,2022,Rear-end,Human
+3dbd5d95-1163-4ed6-a4d3-82327ab019ce,Close Claim,2021-02-17 06:04:53.732178,Theresa Hess,Kevin Valencia,Stephanie Rice,4334.12,72,Comprehensive,Hyundai,Elantra,2022,Rear-end,Human
+3c24f11d-0a31-43d5-ac40-adaf8da6e7be,First Notification of Loss (FNOL),2023-02-20 02:02:22.589214,Felicia Martin,Hannah Atkinson,Darlene Manning,2623.16,28,Comprehensive,Hyundai,Elantra,2019,Rollover,RPA
+3c24f11d-0a31-43d5-ac40-adaf8da6e7be,Assign Claim,2023-03-10 01:13:38.035659,Felicia Martin,Hannah Atkinson,Darlene Manning,2623.16,28,Comprehensive,Hyundai,Elantra,2019,Rollover,RPA
+3c24f11d-0a31-43d5-ac40-adaf8da6e7be,Claim Decision,2023-03-15 02:50:43.573903,Felicia Martin,Hannah Atkinson,Darlene Manning,2623.16,28,Comprehensive,Hyundai,Elantra,2019,Rollover,RPA
+3c24f11d-0a31-43d5-ac40-adaf8da6e7be,Set Reserve,2023-03-19 09:40:09.559094,Felicia Martin,Hannah Atkinson,Darlene Manning,2623.16,28,Comprehensive,Hyundai,Elantra,2019,Rollover,RPA
+3c24f11d-0a31-43d5-ac40-adaf8da6e7be,Payment Sent,2023-03-27 00:52:34.619462,Felicia Martin,Hannah Atkinson,Darlene Manning,2623.16,28,Comprehensive,Hyundai,Elantra,2019,Rollover,RPA
+3c24f11d-0a31-43d5-ac40-adaf8da6e7be,Close Claim,2023-04-02 16:04:36.555674,Felicia Martin,Hannah Atkinson,Darlene Manning,2623.16,28,Comprehensive,Hyundai,Elantra,2019,Rollover,RPA
+12f9852c-96b2-45e9-a52f-343d356c456f,First Notification of Loss (FNOL),2022-01-01 05:22:36.816688,George Mckenzie,Ashley Lucas,Maria Rose,7450.34,42,Comprehensive,Ford,F-150,2015,Rear-end,RPA
+12f9852c-96b2-45e9-a52f-343d356c456f,Assign Claim,2022-01-17 03:32:24.683770,George Mckenzie,Ashley Lucas,Maria Rose,7450.34,42,Comprehensive,Ford,F-150,2015,Rear-end,RPA
+12f9852c-96b2-45e9-a52f-343d356c456f,Claim Decision,2022-01-23 09:09:24.498520,George Mckenzie,Ashley Lucas,Maria Rose,7450.34,42,Comprehensive,Ford,F-150,2015,Rear-end,RPA
+12f9852c-96b2-45e9-a52f-343d356c456f,Set Reserve,2022-01-26 23:10:46.520888,George Mckenzie,Ashley Lucas,Maria Rose,7450.34,42,Comprehensive,Ford,F-150,2015,Rear-end,RPA
+12f9852c-96b2-45e9-a52f-343d356c456f,Payment Sent,2022-01-29 00:23:15.820668,George Mckenzie,Ashley Lucas,Maria Rose,7450.34,42,Comprehensive,Ford,F-150,2015,Rear-end,RPA
+12f9852c-96b2-45e9-a52f-343d356c456f,Close Claim,2022-02-02 01:35:02.641449,George Mckenzie,Ashley Lucas,Maria Rose,7450.34,42,Comprehensive,Ford,F-150,2015,Rear-end,RPA
+6e21c2b3-6510-4476-84f4-76a6eb3a7345,First Notification of Loss (FNOL),2022-08-09 05:18:38.990070,George Davis,Richard Hampton,Donald Chaney,2583.64,73,Collision,Jeep,Wrangler,2013,Rollover,RPA
+6e21c2b3-6510-4476-84f4-76a6eb3a7345,Assign Claim,2022-08-22 02:04:52.857933,George Davis,Richard Hampton,Donald Chaney,2583.64,73,Collision,Jeep,Wrangler,2013,Rollover,RPA
+6e21c2b3-6510-4476-84f4-76a6eb3a7345,Claim Decision,2022-08-30 22:04:59.107233,George Davis,Richard Hampton,Donald Chaney,2583.64,73,Collision,Jeep,Wrangler,2013,Rollover,RPA
+6e21c2b3-6510-4476-84f4-76a6eb3a7345,Set Reserve,2022-09-02 20:13:02.741067,George Davis,Richard Hampton,Donald Chaney,2583.64,73,Collision,Jeep,Wrangler,2013,Rollover,RPA
+6e21c2b3-6510-4476-84f4-76a6eb3a7345,Payment Sent,2022-09-06 13:32:32.786131,George Davis,Richard Hampton,Donald Chaney,2583.64,73,Collision,Jeep,Wrangler,2013,Rollover,RPA
+6e21c2b3-6510-4476-84f4-76a6eb3a7345,Close Claim,2022-09-11 17:14:09.935290,George Davis,Richard Hampton,Donald Chaney,2583.64,73,Collision,Jeep,Wrangler,2013,Rollover,RPA
+a5c31a33-282d-49fb-bb65-4ece1e90ef7d,First Notification of Loss (FNOL),2022-12-28 03:08:33.098892,Angela Parrish,David Matthews,Paula Coleman,9036.51,78,Liability,Jeep,Wrangler,2021,Rear-end,RPA
+a5c31a33-282d-49fb-bb65-4ece1e90ef7d,Assign Claim,2023-01-14 17:41:04.638704,Angela Parrish,David Matthews,Paula Coleman,9036.51,78,Liability,Jeep,Wrangler,2021,Rear-end,RPA
+a5c31a33-282d-49fb-bb65-4ece1e90ef7d,Claim Decision,2023-01-23 14:44:34.662789,Angela Parrish,David Matthews,Paula Coleman,9036.51,78,Liability,Jeep,Wrangler,2021,Rear-end,RPA
+a5c31a33-282d-49fb-bb65-4ece1e90ef7d,Set Reserve,2023-01-29 14:41:46.820635,Angela Parrish,David Matthews,Paula Coleman,9036.51,78,Liability,Jeep,Wrangler,2021,Rear-end,RPA
+a5c31a33-282d-49fb-bb65-4ece1e90ef7d,Payment Sent,2023-02-05 05:29:26.791435,Angela Parrish,David Matthews,Paula Coleman,9036.51,78,Liability,Jeep,Wrangler,2021,Rear-end,RPA
+a5c31a33-282d-49fb-bb65-4ece1e90ef7d,Close Claim,2023-02-12 00:41:25.766947,Angela Parrish,David Matthews,Paula Coleman,9036.51,78,Liability,Jeep,Wrangler,2021,Rear-end,RPA
+89254923-b640-4e10-bb9e-0e8e8434c6e9,First Notification of Loss (FNOL),2022-02-14 00:10:21.609605,Melvin Rhodes,Gary Hubbard,Aimee Shields,8693.75,58,Liability,Nissan,Altima,2019,Rollover,Human
+89254923-b640-4e10-bb9e-0e8e8434c6e9,Assign Claim,2022-02-28 21:29:40.009110,Melvin Rhodes,Gary Hubbard,Aimee Shields,8693.75,58,Liability,Nissan,Altima,2019,Rollover,Human
+89254923-b640-4e10-bb9e-0e8e8434c6e9,Claim Decision,2022-03-07 01:48:44.227337,Melvin Rhodes,Gary Hubbard,Aimee Shields,8693.75,58,Liability,Nissan,Altima,2019,Rollover,Human
+89254923-b640-4e10-bb9e-0e8e8434c6e9,Set Reserve,2022-03-12 08:54:49.245631,Melvin Rhodes,Gary Hubbard,Aimee Shields,8693.75,58,Liability,Nissan,Altima,2019,Rollover,Human
+89254923-b640-4e10-bb9e-0e8e8434c6e9,Payment Sent,2022-03-15 16:35:43.421210,Melvin Rhodes,Gary Hubbard,Aimee Shields,8693.75,58,Liability,Nissan,Altima,2019,Rollover,Human
+89254923-b640-4e10-bb9e-0e8e8434c6e9,Close Claim,2022-03-21 01:40:00.594900,Melvin Rhodes,Gary Hubbard,Aimee Shields,8693.75,58,Liability,Nissan,Altima,2019,Rollover,Human
+d9410760-56d4-4a29-a310-92c6ae51e342,First Notification of Loss (FNOL),2022-08-02 23:12:36.583259,Linda Cooper,Mckenzie Martin,William Fernandez,1904.9,61,Comprehensive,Chevrolet,Silverado,2017,Side-impact,Human
+d9410760-56d4-4a29-a310-92c6ae51e342,Assign Claim,2022-08-20 01:51:15.225202,Linda Cooper,Mckenzie Martin,William Fernandez,1904.9,61,Comprehensive,Chevrolet,Silverado,2017,Side-impact,Human
+d9410760-56d4-4a29-a310-92c6ae51e342,Claim Decision,2022-08-25 14:15:01.833944,Linda Cooper,Mckenzie Martin,William Fernandez,1904.9,61,Comprehensive,Chevrolet,Silverado,2017,Side-impact,Human
+d9410760-56d4-4a29-a310-92c6ae51e342,Set Reserve,2022-08-29 00:08:14.312437,Linda Cooper,Mckenzie Martin,William Fernandez,1904.9,61,Comprehensive,Chevrolet,Silverado,2017,Side-impact,Human
+d9410760-56d4-4a29-a310-92c6ae51e342,Payment Sent,2022-09-02 00:34:29.023743,Linda Cooper,Mckenzie Martin,William Fernandez,1904.9,61,Comprehensive,Chevrolet,Silverado,2017,Side-impact,Human
+d9410760-56d4-4a29-a310-92c6ae51e342,Close Claim,2022-09-04 17:56:02.316260,Linda Cooper,Mckenzie Martin,William Fernandez,1904.9,61,Comprehensive,Chevrolet,Silverado,2017,Side-impact,Human
+9297b414-a1cc-4f68-a3ac-efad8c07ea5c,First Notification of Loss (FNOL),2020-07-26 15:38:58.386303,Jeff Sanchez,Taylor Jackson,Virginia Collier,5400.0,78,Comprehensive,Jeep,Wrangler,2018,Rear-end,Human
+9297b414-a1cc-4f68-a3ac-efad8c07ea5c,Assign Claim,2020-08-10 22:51:35.688306,Jeff Sanchez,Taylor Jackson,Virginia Collier,5400.0,78,Comprehensive,Jeep,Wrangler,2018,Rear-end,Human
+9297b414-a1cc-4f68-a3ac-efad8c07ea5c,Claim Decision,2020-08-17 07:15:32.196052,Jeff Sanchez,Taylor Jackson,Virginia Collier,5400.0,78,Comprehensive,Jeep,Wrangler,2018,Rear-end,Human
+9297b414-a1cc-4f68-a3ac-efad8c07ea5c,Set Reserve,2020-08-18 00:32:24.911719,Jeff Sanchez,Taylor Jackson,Virginia Collier,5400.0,78,Comprehensive,Jeep,Wrangler,2018,Rear-end,Human
+9297b414-a1cc-4f68-a3ac-efad8c07ea5c,Payment Sent,2020-08-22 09:56:33.845464,Jeff Sanchez,Taylor Jackson,Virginia Collier,5400.0,78,Comprehensive,Jeep,Wrangler,2018,Rear-end,Human
+9297b414-a1cc-4f68-a3ac-efad8c07ea5c,Close Claim,2020-08-24 21:44:00.875608,Jeff Sanchez,Taylor Jackson,Virginia Collier,5400.0,78,Comprehensive,Jeep,Wrangler,2018,Rear-end,Human
+c94fd313-45a8-4cf4-a888-78b0ae0615a8,First Notification of Loss (FNOL),2021-08-31 13:23:17.318499,William Knapp,Jessica Lewis,Meagan Weaver,7799.74,54,Comprehensive,Ford,F-150,2011,Rollover,Human
+c94fd313-45a8-4cf4-a888-78b0ae0615a8,Assign Claim,2021-09-13 16:28:24.765424,William Knapp,Jessica Lewis,Meagan Weaver,7799.74,54,Comprehensive,Ford,F-150,2011,Rollover,Human
+c94fd313-45a8-4cf4-a888-78b0ae0615a8,Claim Decision,2021-09-17 02:24:59.734825,William Knapp,Jessica Lewis,Meagan Weaver,7799.74,54,Comprehensive,Ford,F-150,2011,Rollover,Human
+c94fd313-45a8-4cf4-a888-78b0ae0615a8,Set Reserve,2021-09-21 00:41:56.344121,William Knapp,Jessica Lewis,Meagan Weaver,7799.74,54,Comprehensive,Ford,F-150,2011,Rollover,Human
