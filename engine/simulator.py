@@ -1,221 +1,104 @@
-from core.state import system_state, claim, worker, Queue
 import random
+from core.state import claim
+from core.parameters import get_system_parameters
 
 
-def assign_workers(state, processing_time):
-    for worker in state.worker_object:
-        if worker.is_busy:
+def assign_workers(state):
+    for w in state.worker_object:
+        if w.is_busy or not state.Queue.arr:
             continue
 
-        if not state.Queue.arr:
-            break
+        c = state.Queue.arr.pop(0)
 
-        claim_obj = state.Queue.arr.pop(0)
+        w.current_claim = c
+        w.is_busy = True
+        w.remaining_time = c.processing_time
 
-        worker.current_claim = claim_obj
-        worker.is_busy = True
-        worker.remaining_time = processing_time
-
-        claim_obj.start_time = state.current_time
+        c.start_time = state.current_time
 
 
 def process_work(state):
-    for worker in state.worker_object:
-        if worker.is_busy:
-            worker.remaining_time -= 1
+    for w in state.worker_object:
+        if w.is_busy:
+            w.remaining_time -= 1
 
 
 def complete_claims(state):
-    for worker in state.worker_object:
+    for w in state.worker_object:
 
-        if worker.is_busy and worker.remaining_time == 0:
-
-            claim_obj = worker.current_claim
+        if w.is_busy and w.remaining_time <= 0:
+            c = w.current_claim
 
             # mark completion
-            claim_obj.complition_time = state.current_time
+            c.complition_time = state.current_time
+
+            if (c.complition_time - c.arrival_time) > state.SLA_time:
+                c.SLA_Breached = True
 
             # move claim to completed list
-            state.complited_claims.append(claim_obj)
+            state.complited_claims.append(c)
 
             # free the worker
-            worker.current_claim = None
-            worker.is_busy = False
-            worker.remaining_time = 0
+            w.current_claim = None
+            w.is_busy = False
+            w.remaining_time = 0
 
 
-# def SLA_check(state):
-#     for claim_obj in state.complited_claims:
-#         if claim_obj.complition_time is None:
-#             continue
-
-#         total_time = claim_obj.complition_time - claim_obj.arrival_time
-
-#         if total_time > state.SLA_time:
-#             claim_obj.SLA_Breached = True
-
-
-def predict_SLA_breach(state, processing_time):
-    capacity_per_minute = len(state.worker_object) / processing_time
-
-    if capacity_per_minute == 0:
-        return
-
-    for idx, claim_obj in enumerate(state.Queue.arr):
-        estimated_wait = idx / capacity_per_minute
-        estimated_completion_time = state.current_time + estimated_wait
-
-        if (estimated_completion_time - claim_obj.arrival_time) > state.SLA_time:
-            claim_obj.SLA_Breached = True
-
-
-def advance_time(state):
-    state.current_time += 1
-
-
-def cloned_system_state(state):
-    cloned = system_state()
-
-    cloned.current_time = state.current_time
-    cloned.SLA_time = state.SLA_time
-    cloned.workers = state.workers
-
-    claim_map = {}
-
+def check_active_sla_breaches(state):
+    # waiting claims
     for c in state.Queue.arr:
-        new_c = claim()
-        new_c.arrival_time = c.arrival_time
-        new_c.start_time = c.start_time
-        new_c.complition_time = c.complition_time
-        new_c.SLA_Breached = c.SLA_Breached
-        claim_map[c] = new_c
-        cloned.Queue.arr.append(new_c)
+        if not c.SLA_Breached:
+            if (state.current_time - c.arrival_time) > state.SLA_time:
+                c.SLA_Breached = True
 
-    for c in state.complited_claims:
-        new_c = claim()
-        new_c.arrival_time = c.arrival_time
-        new_c.start_time = c.start_time
-        new_c.complition_time = c.complition_time
-        new_c.SLA_Breached = c.SLA_Breached
-        claim_map[c] = new_c
-        cloned.complited_claims.append(new_c)
-
+    # in-progress claims
     for w in state.worker_object:
-        new_w = worker()
-        new_w.current_claim = w.current_claim
-        new_w.is_busy = w.is_busy
-        new_w.remaining_time = w.remaining_time
-
-        if w.current_claim is not None:
-            new_w.current_claim = claim_map[w.current_claim]
-
-        cloned.worker_object.append(new_w)
-
-    return cloned
+        if w.is_busy:
+            c = w.current_claim
+            if not c.SLA_Breached:
+                if (state.current_time - c.arrival_time) > state.SLA_time:
+                    c.SLA_Breached = True
 
 
-def future_arrivals(state, expected=10, variation=4):
-    if state.current_time % 60 != 0:
-        return
-    low = max(0, expected - variation)
-    high = expected + variation
+def future_arrivals(state, params):
+    low = max(0, params["avg_arrivals_per_day"] - params["arrival_variation"])
+    high = params["avg_arrivals_per_day"] + params["arrival_variation"]
 
     arrivals = random.randint(low, high)
 
     for _ in range(arrivals):
-        claim_obj = claim()
-        claim_obj.arrival_time = state.current_time
-        state.Queue.arr.append(claim_obj)
+        proc_time = random.choice(params["processing_time_minutes"])
+        state.Queue.arr.append(claim(state.current_time, int(proc_time)))
 
 
-def run_single_simulation(
-    base_state,
-    forecast_window,
-    processing_time,
-    expected_arrivals,
-    arrival_variation,
-):
-    state = cloned_system_state(base_state)
+def run_single_simulation(base_state, forecast_minutes, params):
+    state = base_state
 
-    while state.current_time < forecast_window:
-
-        future_arrivals(state, expected_arrivals, arrival_variation)
-
-        assign_workers(state, processing_time)
+    while state.current_time < forecast_minutes:
+        future_arrivals(state, params)
+        assign_workers(state)
         process_work(state)
         complete_claims(state)
-        # SLA_check(state)
-        predict_SLA_breach(state, processing_time)
-        advance_time(state)
+        check_active_sla_breaches(state)
+        state.current_time += 1
 
-    total_completed = len(state.complited_claims)
-    sla_breached = any(c.SLA_Breached for c in state.complited_claims) or any(
-        c.SLA_Breached for c in state.Queue.arr
-    )
-    final_queue_size = len(state.Queue.arr)
+    # collect all claims
+    all_claims = []
+    all_claims.extend(state.Queue.arr)
+    all_claims.extend(state.complited_claims)
 
-    return {
-        "completed": total_completed,
-        "sla_breaches": sla_breached,
-        "final_queue_size": final_queue_size,
-    }
+    for w in state.worker_object:
+        if w.is_busy and w.current_claim:
+            all_claims.append(w.current_claim)
 
+    total_claims = len(all_claims)
+    sla_breached = sum(1 for c in all_claims if c.SLA_Breached)
 
-def run_forecast(
-    base_state,
-    forecast_window,
-    processing_time,
-    num_simulations,
-    expected_arrivals,
-    arrival_variations,
-):
-
-    total_runs = num_simulations
-    sla_breach_runs = 0
-    total_completed = 0
-    total_final_queue = 0
-
-    for _ in range(num_simulations):
-        result = run_single_simulation(
-            base_state=base_state,
-            forecast_window=forecast_window,
-            processing_time=processing_time,
-            expected_arrivals=expected_arrivals,
-            arrival_variation=arrival_variations,
-        )
-
-        total_completed += result["completed"]
-        total_final_queue += result["final_queue_size"]
-
-        if result["sla_breaches"] > 0:
-            sla_breach_runs += 1
-    
-    print(sla_breach_runs)
-
-    sla_breach_probabiltiy = sla_breach_runs / total_runs
-
-    print(
-        f"sla_breach_probability: {sla_breach_probabiltiy}, \navg_completed_claims: {total_completed / total_runs}\navg_final_queue_size: {total_final_queue / total_runs},\nsimulations_run: {total_runs}"
-    )
+    breach_rate = sla_breached / total_claims if total_claims > 0 else 0.0
 
     return {
-        "sla_breach_probability": sla_breach_probabiltiy,
-        "avg_completed_claims": total_completed / total_runs,
-        "avg_final_queue_size": total_final_queue / total_runs,
-        "simulations_run": total_runs,
+        "total_claims": total_claims,
+        "sla_breached": sla_breached,
+        "breach_rate": breach_rate,
+        "final_queue": len(state.Queue.arr),
     }
-
-
-ss = system_state()
-ss.worker_list()
-ss.queue_list()
-ss.SLA_time = 24 * 60
-
-run_forecast(
-    base_state=ss,
-    forecast_window=240,
-    processing_time=5,
-    num_simulations=50,
-    expected_arrivals=450,
-    arrival_variations=4,
-)

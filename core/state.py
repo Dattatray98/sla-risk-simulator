@@ -1,11 +1,9 @@
 class systemData:
-    def __init__(self):
-        self.workers = 8
-        self.queue_size = 1000
-        self.SLA_time = 24 * 60
-        self.time = 0 
-        self.list = []
-    
+    def __init__(self, workers, QueueLength = 0):
+        self.workers = workers
+        self.QueueLength = QueueLength
+        self.SLA_time = None
+
 
 class worker:
     def __init__(self):
@@ -14,33 +12,35 @@ class worker:
         self.current_claim = None
 
 
-class claim :
-    def __init__(self):
-        self.arrival_time = 0
+class claim:
+    def __init__(self, arrival_time, processing_time):
+        self.arrival_time = arrival_time
+        self.processing_time = processing_time
         self.start_time = None
         self.complition_time = None
         self.SLA_Breached = False
 
 
-class Queue :
+class Queue:
     def __init__(self):
         self.arr = []
 
 
 class system_state(systemData):
-    def __init__(self):
-        super().__init__()
+    def __init__(self, workers, QueueLength):
+        super().__init__(workers, QueueLength)
         self.current_time = 0
         self.worker_object = []
         self.Queue = Queue()
         self.complited_claims = []
 
     def worker_list(self):
-        for i in range(8):
+        for i in range(self.workers):
             self.worker_object.append(worker())
-        print("workers  = ",len(self.worker_object))
-    
-    def queue_list(self):
-        for i in range(self.queue_size):
-            self.Queue.arr.append(claim())
-        print("Queue list = ",len(self.Queue.arr))
+
+    def QueueList(self):
+        if self.QueueLength == None:
+            return
+        else:
+            for i in range(self.QueueLength):
+                self.Queue.arr.append(claim(arrival_time=0, processing_time=0))
